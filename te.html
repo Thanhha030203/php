@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Container Grid</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container-grid">
+        <div class="container">
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+        </div>
+        <div class="container">
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+        </div>
+        <div class="container">
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+        </div>
+        <div class="container">
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+        </div>
+        <div class="container">
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+        </div>
+        <div class="container">
+            <p>cccc</p>
+            <p>cccc</p>
+            <p>cccc</p>
+        </div>
+        <div class="container">
+            <p>cccc</p>
+        </div>
+        <div class="container">
+            <p>cccc</p>
+            <p>cccc</p>
+        </div>
+    </div>
+</body>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        /* Thẳng hàng bên trái */
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 220px);
+        grid-gap: 10px;
+        /* Khoảng cách giữa các container */
+    }
+
+
+    p {
+        display: block;
+        /* Hiển thị mỗi đoạn văn bản trên một dòng */
+        margin: 0;
+        /* Loại bỏ margin mặc định */
+    }
+
+    .container {
+        width: 220px;
+        /* Kích thước chiều rộng cố định */
+        background-color: lightblue;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        padding: 10px;
+        height: auto;
+    }
+
+
+
+    /* Zoom in - 1 row with 6 containers and 1 row with 2 containers */
+    @media (min-width: 1000px) {
+        .container-grid {
+            grid-template-columns: repeat(4, 220px) repeat(2, 220px);
+            /* 1 dòng 6 container và 1 dòng 2 container */
+        }
+    }
+</style>
+
+</html>
